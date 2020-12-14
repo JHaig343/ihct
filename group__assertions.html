@@ -102,6 +102,12 @@ Macros</h2></td></tr>
 <tr class="memitem:gab2f80fdd050efcd1672d1046b078f6f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__assertions.html#gab2f80fdd050efcd1672d1046b078f6f9">IHCT_NASSERT</a>(expr)</td></tr>
 <tr class="memdesc:gab2f80fdd050efcd1672d1046b078f6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts a statement inside a test unit. If the expression is true, the unit will fail the test.  <a href="group__assertions.html#gab2f80fdd050efcd1672d1046b078f6f9">More...</a><br /></td></tr>
 <tr class="separator:gab2f80fdd050efcd1672d1046b078f6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32283b0568d386d5404813a42319da93"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__assertions.html#ga32283b0568d386d5404813a42319da93">IHCT_ASSERT_STR</a>(s1,  s2)</td></tr>
+<tr class="memdesc:ga32283b0568d386d5404813a42319da93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts two strings inside a test unit to be equal. If there is any difference in the strings, the unit will fail the test.  <a href="group__assertions.html#ga32283b0568d386d5404813a42319da93">More...</a><br /></td></tr>
+<tr class="separator:ga32283b0568d386d5404813a42319da93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d13e62adc7969620ab7b6a11f49fe47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__assertions.html#ga0d13e62adc7969620ab7b6a11f49fe47">IHCT_NASSERT_STR</a>(s1,  s2)</td></tr>
+<tr class="memdesc:ga0d13e62adc7969620ab7b6a11f49fe47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts two strings inside a test unit to not be equal. If there is any difference in the strings, the unit will fail the test.  <a href="group__assertions.html#ga0d13e62adc7969620ab7b6a11f49fe47">More...</a><br /></td></tr>
+<tr class="separator:ga0d13e62adc7969620ab7b6a11f49fe47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga29227854415b8a459440a62c378b07f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__assertions.html#ga29227854415b8a459440a62c378b07f0">IHCT_PASS</a>()</td></tr>
 <tr class="memdesc:ga29227854415b8a459440a62c378b07f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the test as passed and return.  <a href="group__assertions.html#ga29227854415b8a459440a62c378b07f0">More...</a><br /></td></tr>
 <tr class="separator:ga29227854415b8a459440a62c378b07f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,6 +139,43 @@ Macros</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">expr</td><td>the expression to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga32283b0568d386d5404813a42319da93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32283b0568d386d5404813a42319da93">&#9670;&nbsp;</a></span>IHCT_ASSERT_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IHCT_ASSERT_STR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">s1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">s2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Asserts two strings inside a test unit to be equal. If there is any difference in the strings, the unit will fail the test. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s1</td><td>first string to compare </td></tr>
+    <tr><td class="paramname">s2</td><td>second string to compare </td></tr>
   </table>
   </dd>
 </dl>
@@ -179,6 +222,43 @@ Macros</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">expr</td><td>the expression to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0d13e62adc7969620ab7b6a11f49fe47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d13e62adc7969620ab7b6a11f49fe47">&#9670;&nbsp;</a></span>IHCT_NASSERT_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IHCT_NASSERT_STR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">s1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">s2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Asserts two strings inside a test unit to not be equal. If there is any difference in the strings, the unit will fail the test. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s1</td><td>first string to compare </td></tr>
+    <tr><td class="paramname">s2</td><td>second string to compare </td></tr>
   </table>
   </dd>
 </dl>
