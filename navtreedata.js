@@ -22,14 +22,38 @@
 
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
-var menudata={children:[
-{text:"Main Page",url:"index.html"},
-{text:"Modules",url:"modules.html"},
-{text:"Data Structures",url:"annotated.html",children:[
-{text:"Data Structures",url:"annotated.html"},
-{text:"Data Structure Index",url:"classes.html"}]},
-{text:"Files",url:"files.html",children:[
-{text:"File List",url:"files.html"},
-{text:"Globals",url:"globals.html",children:[
-{text:"All",url:"globals.html"},
-{text:"Macros",url:"globals_defs.html"}]}]}]}
+var NAVTREE =
+[
+  [ "ihct (I Hate C Testing)", "index.html", [
+    [ "ihct", "index.html", [
+      [ "Installation & Usage", "index.html#autotoc_md3", [
+        [ "'I Hate C Testing': a minimal testing framework for C", "index.html#autotoc_md1", [
+          [ "See <a href=\"https://ollelogdahl.github.io/ihct/\">documentation</a>", "index.html#autotoc_md4", null ]
+        ] ]
+      ] ],
+      [ "Features", "index.html#autotoc_md6", null ],
+      [ "Links", "index.html#autotoc_md7", null ],
+      [ "Licensing", "index.html#autotoc_md8", null ]
+    ] ],
+    [ "Modules", "modules.html", "modules" ],
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "Globals", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
+    ] ]
+  ] ]
+];
+
+var NAVTREEINDEX =
+[
+"annotated.html"
+];
+
+var SYNCONMSG = 'click to disable panel synchronisation';
+var SYNCOFFMSG = 'click to enable panel synchronisation';
