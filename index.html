@@ -99,8 +99,8 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 Installation &amp; Usage</h1>
 <h3><a class="anchor" id="autotoc_md4"></a>
 See &lt;a href="https://ollelogdahl.github.io/ihct/"&gt;documentation&lt;/a&gt;</h3>
-<p>To use this framework, include <code><a class="el" href="ihct_8h.html">ihct.h</a></code> and <code>ihct.c</code> in your project. See <code>ex.c</code> for an extended example. The test creates it's own executable, and therefore needs an entrypoint. The following code should get you started.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="ihct_8h.html">ihct.h</a>&gt;</span></div>
+<p>To use this framework, include <code><a class="el" href="ihct_8h_source.html">ihct.h</a></code> and <code>ihct.c</code> in your project. See <code>ex.c</code> for an extended example. The test creates it's own executable, and therefore needs an entrypoint. The following code should get you started.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;ihct.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><a class="code" href="group__funcs.html#ga9ec6e156efc70e7320fbaaffca05a4ca">IHCT_TEST</a>(arithmetic_basic) {</div>
 <div class="line">    <span class="keywordtype">int</span> a = 13;</div>
@@ -144,7 +144,6 @@ Licensing</h1>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="agroup__funcs_html_ga9ec6e156efc70e7320fbaaffca05a4ca"><div class="ttname"><a href="group__funcs.html#ga9ec6e156efc70e7320fbaaffca05a4ca">IHCT_TEST</a></div><div class="ttdeci">#define IHCT_TEST(name)</div><div class="ttdoc">Create a new test unit, which can take any number of asserts.</div><div class="ttdef"><b>Definition:</b> ihct.h:150</div></div>
-<div class="ttc" id="aihct_8h_html"><div class="ttname"><a href="ihct_8h.html">ihct.h</a></div></div>
 <div class="ttc" id="agroup__assertions_html_gab2f80fdd050efcd1672d1046b078f6f9"><div class="ttname"><a href="group__assertions.html#gab2f80fdd050efcd1672d1046b078f6f9">IHCT_NASSERT</a></div><div class="ttdeci">#define IHCT_NASSERT(expr)</div><div class="ttdoc">Asserts a statement inside a test unit. If the expression is true, the unit will fail the test.</div><div class="ttdef"><b>Definition:</b> ihct.h:111</div></div>
 <div class="ttc" id="agroup__funcs_html_ga68bd7150a4de7ae56cfd0b94a8780552"><div class="ttname"><a href="group__funcs.html#ga68bd7150a4de7ae56cfd0b94a8780552">IHCT_RUN</a></div><div class="ttdeci">#define IHCT_RUN(argc, argv)</div><div class="ttdoc">Runs all tests. Is to be called once in the main entrypoint.</div><div class="ttdef"><b>Definition:</b> ihct.h:143</div></div>
 <div class="ttc" id="agroup__assertions_html_gaee6cf7956907d821659dae809a340341"><div class="ttname"><a href="group__assertions.html#gaee6cf7956907d821659dae809a340341">IHCT_ASSERT</a></div><div class="ttdeci">#define IHCT_ASSERT(expr)</div><div class="ttdoc">Asserts a statement inside a test unit. If the expression is false, the unit will fail the test.</div><div class="ttdef"><b>Definition:</b> ihct.h:104</div></div>
