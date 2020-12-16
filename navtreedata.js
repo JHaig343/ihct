@@ -30,9 +30,10 @@ var NAVTREE =
         [ "See <a href=\"https://ollelogdahl.github.io/ihct/\">documentation</a>", "index.html#autotoc_md4", null ]
       ] ]
     ] ],
-    [ "Features", "index.html#autotoc_md6", null ],
-    [ "Links", "index.html#autotoc_md7", null ],
-    [ "Licensing", "index.html#autotoc_md8", null ],
+    [ "Why?", "index.html#autotoc_md6", null ],
+    [ "Features", "index.html#autotoc_md8", null ],
+    [ "Links", "index.html#autotoc_md9", null ],
+    [ "Licensing", "index.html#autotoc_md10", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],

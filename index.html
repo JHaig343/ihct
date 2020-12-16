@@ -99,19 +99,17 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 Installation &amp; Usage</h1>
 <h3><a class="anchor" id="autotoc_md4"></a>
 See &lt;a href="https://ollelogdahl.github.io/ihct/"&gt;documentation&lt;/a&gt;</h3>
-<p>To use this framework, include <code><a class="el" href="ihct_8h_source.html">ihct.h</a></code> and <code>ihct.c</code> in your project. See <code>ex.c</code> for an extended example. The test creates it's own executable, and therefore needs an entrypoint. The following code should get you started.</p>
+<p>To use this framework, simply include <code><a class="el" href="ihct_8h_source.html">ihct.h</a></code> in your project and link to the library. <b>Everything else happens automatically</b>. The following code should get you started.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;ihct.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line">IHCT_TEST(arithmetic_basic) {</div>
 <div class="line">    <span class="keywordtype">int</span> a = 13;</div>
 <div class="line">    <a class="code" href="group__assertions.html#gaee6cf7956907d821659dae809a340341">IHCT_ASSERT</a>(a + 2 == 15);</div>
-<div class="line">    <a class="code" href="group__assertions.html#gaee6cf7956907d821659dae809a340341">IHCT_ASSERT</a>(a - 4 == 9);</div>
 <div class="line">    <a class="code" href="group__assertions.html#gaee6cf7956907d821659dae809a340341">IHCT_ASSERT</a>(a * 2 == 26);</div>
 <div class="line">}</div>
 <div class="line">IHCT_TEST(string_basic) {</div>
 <div class="line">    <span class="keywordtype">char</span> *s1 = <span class="stringliteral">&quot;abba&quot;</span>;</div>
 <div class="line">    <a class="code" href="group__assertions.html#gab2f80fdd050efcd1672d1046b078f6f9">IHCT_NASSERT</a>(strcpr(s1, <span class="stringliteral">&quot;abba&quot;</span>));</div>
-<div class="line">    <a class="code" href="group__assertions.html#gaee6cf7956907d821659dae809a340341">IHCT_ASSERT</a>(strcpr(s1, <span class="stringliteral">&quot;Abba&quot;</span>));</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
@@ -121,22 +119,25 @@ See &lt;a href="https://ollelogdahl.github.io/ihct/"&gt;documentation&lt;/a&gt;<
 <div class="line">cd build</div>
 <div class="line">cmake .. &amp;&amp; make -j4</div>
 <div class="line">sudo make install</div>
-</div><!-- fragment --><p>The example <code>ex.c</code> can be compiled and executed by running: </p><div class="fragment"><div class="line">mkdir build</div>
+</div><!-- fragment --><p>See <code>ex.c</code> for an extended example. Note that tests are created as it's own executable, and therefore needs an entrypoint. The example <code>ex.c</code> can be compiled and executed by running: </p><div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
 <div class="line">cmake .. &amp;&amp; make -j4</div>
 <div class="line">./example</div>
-</div><!-- fragment --><p>Self tests can be run along with own tests by adding compiler flag <code>-DIHCT_SELF_TEST</code>. (This may be very redundant; just see it as more examples :-) )</p>
-<hr  />
+</div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md6"></a>
+Why?</h1>
+<p>I have for a long time been stuck at unit testing in plain C. Many modern solutions use C++ as a test environment for C, but I wanted something more lightweight, that i can quickly get up to speed with. I decided to write my own test framework with two things in mind: <b>development speed</b> and <b>minimalism</b>. To improve development speed, all test functions are automatically included into the runner, and the library interface is kept minimal. It has <b>zero dependencies</b>, and C99 compatible (<em>NOTE</em> GNU C). The library also implements some safety to tests, catching fatal signals and hung functions.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md8"></a>
 Features</h1>
 <ul>
 <li>Basic test units</li>
 <li>Basic asserts</li>
 <li>Automatic test loader</li>
 <li>Catching fatal signals (SEGFAULTS etc.) in tests (no line number, but sets them as failed).</li>
-<li>Catching hung tests (again, no line number).</li>
+<li>Catching hung tests (again, no line number). Self tests can be run along with own tests by adding compiler flag <code>-DIHCT_SELF_TEST</code>. (This may be very redundant; just see it as more examples :-) )</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 Links</h1>
 <ul>
 <li><a href="https://github.com/ollelogdahl/ihct/">Repository</a></li>
@@ -146,7 +147,7 @@ Links</h1>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Licensing</h1>
 <p>This project, and all code it contains, is licensed under the <em>MIT License</em> and can be read [here](LICENSE). </p>
 </div></div><!-- PageDoc -->
