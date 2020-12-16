@@ -120,7 +120,7 @@ See &lt;a href="https://ollelogdahl.github.io/ihct/"&gt;documentation&lt;/a&gt;<
 </div><!-- fragment --><p>The example <code>ex.c</code> can be compiled with by running: </p><div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
 <div class="line">cmake .. &amp;&amp; make -j4</div>
-</div><!-- fragment --><p>Self tests can be run along with own tests by adding compiler flag <code>-DIHCT_SELF_TEST</code>.</p>
+</div><!-- fragment --><p>Self tests can be run along with own tests by adding compiler flag <code>-DIHCT_SELF_TEST</code>. (This may be very redundant; just see it as more examples :-) )</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md6"></a>
 Features</h1>
@@ -128,6 +128,8 @@ Features</h1>
 <li>Basic test units</li>
 <li>Basic asserts</li>
 <li>Automatic test loader</li>
+<li>Catching fatal signals (SEGFAULTS etc.) in tests (no line number, but sets them as failed).</li>
+<li>Catching hung tests (again, no line number).</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md7"></a>
 Links</h1>
