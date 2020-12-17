@@ -177,10 +177,10 @@ $(document).ready(function(){initNavTree('ihct_8h_source.html',''); initResizabl
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">       __LINE__)) return</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
 <div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="group__assertions.html#ga29227854415b8a459440a62c378b07f0">  117</a></span>&#160;<span class="preprocessor">#define IHCT_PASS()                                                                     \</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">    result-&gt;status = PASS; return</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">    { result-&gt;status = PASS; return; }</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
 <div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="group__assertions.html#gafc7fcceb901c14c3d355d85f08c1d15e">  125</a></span>&#160;<span class="preprocessor">#define IHCT_FAIL()                                                                     \</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">    result-&gt;status = FAIL; return</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">    { result-&gt;status = FAIL; return; }</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">// Function macros</span></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"></span> </div>
@@ -191,13 +191,13 @@ $(document).ready(function(){initNavTree('ihct_8h_source.html',''); initResizabl
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment"></span><span class="preprocessor">#define IHCT_TEST(name)                                                                 \</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">    static void test_##name(ihct_test_result *result);                                  \</span></div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">    static void __attribute__((constructor(102))) __construct_test_##name(void) {       \</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">        ihct_construct_test_impl(#name, &amp;test_##name);                                   \</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">        ihct_construct_test_impl(#name, &amp;test_##name);                                  \</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">    }                                                                                   \</span></div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">    static void test_##name(ihct_test_result *result)</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#define IHCT_FIXTURE(name) _Static_assert(0, &quot;Fixtures not implemented.&quot;);</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#define IHCT_FIXTURE(name) _Static_assert(0, &quot;Fixtures not implemented.&quot;)</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#define IHCT_REQUIRE(...) _Static_assert(0, &quot;Fixture requirements not implemented.&quot;);</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#define IHCT_REQUIRE(...) _Static_assert(0, &quot;Fixture requirements not implemented.&quot;)</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
