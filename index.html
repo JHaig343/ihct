@@ -127,7 +127,7 @@ See &lt;a href="https://ollelogdahl.github.io/ihct/"&gt;documentation&lt;/a&gt;<
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md6"></a>
 Why?</h1>
-<p>I have for a long time been stuck at unit testing in plain C. Many modern solutions use C++ as a test environment for C, but I wanted something more lightweight, that i can quickly get up to speed with. I decided to write my own test framework with two things in mind: <b>development speed</b> and <b>minimalism</b>. To improve development speed, all test functions are automatically included into the runner, and the library interface is kept minimal. It has <b>zero dependencies</b>, and works for all GNU C99 POSIX compatible (<em>NOTE</em> GNU C). The library also implements some safety to tests, catching fatal signals and hung functions.</p>
+<p>I have for a long time been stuck at unit testing in plain C. Many modern solutions use C++ as a test environment for C, but I wanted something more lightweight, that i can quickly get up to speed with. I decided to write my own test framework with two things in mind: <b>development speed</b> and <b>minimalism</b>. To improve development speed, all test functions are automatically included into the runner, and the library interface is kept minimal. It requires no dependencies other than a POSIX compliant OS, and compiles on all GNU C99 POSIX compatible compilers. The library also implements some safety to tests, catching fatal signals and hung functions.</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md8"></a>
 Features</h1>
