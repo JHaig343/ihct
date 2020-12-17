@@ -110,7 +110,7 @@ See &lt;a href="https://ollelogdahl.github.io/ihct/"&gt;documentation&lt;/a&gt;<
 <div class="line">}</div>
 <div class="line">IHCT_TEST(string_basic) {</div>
 <div class="line">    <span class="keywordtype">char</span> *s1 = <span class="stringliteral">&quot;abba&quot;</span>;</div>
-<div class="line">    <a class="code" href="group__assertions.html#gab2f80fdd050efcd1672d1046b078f6f9">IHCT_NASSERT</a>(strcpr(s1, <span class="stringliteral">&quot;abba&quot;</span>));</div>
+<div class="line">    <a class="code" href="group__assertions.html#ga0d13e62adc7969620ab7b6a11f49fe47">IHCT_NASSERT_STR</a>(s1, <span class="stringliteral">&quot;abba&quot;</span>);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
@@ -160,7 +160,7 @@ Licensing</h1>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__assertions_html_gab2f80fdd050efcd1672d1046b078f6f9"><div class="ttname"><a href="group__assertions.html#gab2f80fdd050efcd1672d1046b078f6f9">IHCT_NASSERT</a></div><div class="ttdeci">#define IHCT_NASSERT(expr)</div><div class="ttdoc">Asserts a statement inside a test unit. If the expression is true, the unit will fail the test.</div><div class="ttdef"><b>Definition:</b> ihct.h:92</div></div>
+<div class="ttc" id="agroup__assertions_html_ga0d13e62adc7969620ab7b6a11f49fe47"><div class="ttname"><a href="group__assertions.html#ga0d13e62adc7969620ab7b6a11f49fe47">IHCT_NASSERT_STR</a></div><div class="ttdeci">#define IHCT_NASSERT_STR(s1, s2)</div><div class="ttdoc">Asserts two strings inside a test unit not to be equal. If there is any difference in the strings,...</div><div class="ttdef"><b>Definition:</b> ihct.h:108</div></div>
 <div class="ttc" id="agroup__funcs_html_ga68bd7150a4de7ae56cfd0b94a8780552"><div class="ttname"><a href="group__funcs.html#ga68bd7150a4de7ae56cfd0b94a8780552">IHCT_RUN</a></div><div class="ttdeci">#define IHCT_RUN(argc, argv)</div><div class="ttdoc">Runs all tests. Is to be called once in the main entrypoint.</div><div class="ttdef"><b>Definition:</b> ihct.h:141</div></div>
 <div class="ttc" id="agroup__assertions_html_gaee6cf7956907d821659dae809a340341"><div class="ttname"><a href="group__assertions.html#gaee6cf7956907d821659dae809a340341">IHCT_ASSERT</a></div><div class="ttdeci">#define IHCT_ASSERT(expr)</div><div class="ttdoc">Asserts a statement inside a test unit. If the expression is false, the unit will fail the test.</div><div class="ttdef"><b>Definition:</b> ihct.h:85</div></div>
 <!-- start footer part -->
