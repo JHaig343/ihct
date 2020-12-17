@@ -127,7 +127,7 @@ See &lt;a href="https://ollelogdahl.github.io/ihct/"&gt;documentation&lt;/a&gt;<
 </div><!-- fragment --><hr  />
 <h1><a class="anchor" id="autotoc_md6"></a>
 Why?</h1>
-<p>I have for a long time been stuck at unit testing in plain C. Many modern solutions use C++ as a test environment for C, but I wanted something more lightweight, that i can quickly get up to speed with. I decided to write my own test framework with two things in mind: <b>development speed</b> and <b>minimalism</b>. To improve development speed, all test functions are automatically included into the runner, and the library interface is kept minimal. It has <b>zero dependencies</b>, and C99 compatible (<em>NOTE</em> GNU C). The library also implements some safety to tests, catching fatal signals and hung functions.</p>
+<p>I have for a long time been stuck at unit testing in plain C. Many modern solutions use C++ as a test environment for C, but I wanted something more lightweight, that i can quickly get up to speed with. I decided to write my own test framework with two things in mind: <b>development speed</b> and <b>minimalism</b>. To improve development speed, all test functions are automatically included into the runner, and the library interface is kept minimal. It has <b>zero dependencies</b>, and works for all GNU C99 POSIX compatible (<em>NOTE</em> GNU C). The library also implements some safety to tests, catching fatal signals and hung functions.</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md8"></a>
 Features</h1>
@@ -139,6 +139,12 @@ Features</h1>
 <li>Catching hung tests (again, no line number). Self tests can be run along with own tests by adding compiler flag <code>-DIHCT_SELF_TEST</code>. (This may be very redundant; just see it as more examples :-) )</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md9"></a>
+Notes</h1>
+<ul>
+<li>Since it requires <code>__attribute__((constructor))</code> it is not compilable with MSVC.</li>
+<li>Since it uses pthreads and signals, it is POSIX (again, not sure it works with Windows).</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Links</h1>
 <ul>
 <li><a href="https://github.com/ollelogdahl/ihct/">Repository</a></li>
@@ -148,7 +154,7 @@ Links</h1>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 Licensing</h1>
 <p>This project, and all code it contains, is licensed under the <em>MIT License</em> and can be read [here](LICENSE). </p>
 </div></div><!-- PageDoc -->
