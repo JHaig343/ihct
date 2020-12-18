@@ -13,6 +13,7 @@ var NAVTREEINDEX0 =
 "group__assertions.html#gafc7fcceb901c14c3d355d85f08c1d15e":[6,0,2],
 "group__funcs.html":[6,1],
 "group__funcs.html#ga68bd7150a4de7ae56cfd0b94a8780552":[6,1,0],
+"group__funcs.html#ga9ec6e156efc70e7320fbaaffca05a4ca":[6,1,1],
 "ihct_8h_source.html":[8,0,0,0],
 "index.html":[],
 "index.html#autotoc_md1":[0],

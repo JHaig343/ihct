@@ -99,6 +99,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga68bd7150a4de7ae56cfd0b94a8780552"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__funcs.html#ga68bd7150a4de7ae56cfd0b94a8780552">IHCT_RUN</a>(argc,  argv)</td></tr>
 <tr class="memdesc:ga68bd7150a4de7ae56cfd0b94a8780552"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs all tests. Is to be called once in the main entrypoint.  <a href="group__funcs.html#ga68bd7150a4de7ae56cfd0b94a8780552">More...</a><br /></td></tr>
 <tr class="separator:ga68bd7150a4de7ae56cfd0b94a8780552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ec6e156efc70e7320fbaaffca05a4ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__funcs.html#ga9ec6e156efc70e7320fbaaffca05a4ca">IHCT_TEST</a>(name)</td></tr>
+<tr class="memdesc:ga9ec6e156efc70e7320fbaaffca05a4ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new test unit, which can take any number of asserts.  <a href="group__funcs.html#ga9ec6e156efc70e7320fbaaffca05a4ca">More...</a><br /></td></tr>
+<tr class="separator:ga9ec6e156efc70e7320fbaaffca05a4ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>More general macros for function. </p>
@@ -143,9 +146,41 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="ga9ec6e156efc70e7320fbaaffca05a4ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ec6e156efc70e7320fbaaffca05a4ca">&#9670;&nbsp;</a></span>IHCT_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IHCT_TEST</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new test unit, which can take any number of asserts. </p>
+<div class="fragment"><div class="line"><a class="code" href="group__funcs.html#ga9ec6e156efc70e7320fbaaffca05a4ca">IHCT_TEST</a>(basic_test) {</div>
+<div class="line">    <a class="code" href="group__assertions.html#gaee6cf7956907d821659dae809a340341">IHCT_ASSERT</a>(1 == 1);</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Can be shortened to remove 'IHCT_' prefix by defining IHCT_SHORT. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__funcs_html_ga68bd7150a4de7ae56cfd0b94a8780552"><div class="ttname"><a href="group__funcs.html#ga68bd7150a4de7ae56cfd0b94a8780552">IHCT_RUN</a></div><div class="ttdeci">#define IHCT_RUN(argc, argv)</div><div class="ttdoc">Runs all tests. Is to be called once in the main entrypoint.</div><div class="ttdef"><b>Definition:</b> ihct.h:132</div></div>
+<div class="ttc" id="agroup__funcs_html_ga9ec6e156efc70e7320fbaaffca05a4ca"><div class="ttname"><a href="group__funcs.html#ga9ec6e156efc70e7320fbaaffca05a4ca">IHCT_TEST</a></div><div class="ttdeci">#define IHCT_TEST(name)</div><div class="ttdoc">Create a new test unit, which can take any number of asserts.</div><div class="ttdef"><b>Definition:</b> ihct.h:154</div></div>
+<div class="ttc" id="agroup__funcs_html_ga68bd7150a4de7ae56cfd0b94a8780552"><div class="ttname"><a href="group__funcs.html#ga68bd7150a4de7ae56cfd0b94a8780552">IHCT_RUN</a></div><div class="ttdeci">#define IHCT_RUN(argc, argv)</div><div class="ttdoc">Runs all tests. Is to be called once in the main entrypoint.</div><div class="ttdef"><b>Definition:</b> ihct.h:140</div></div>
+<div class="ttc" id="agroup__assertions_html_gaee6cf7956907d821659dae809a340341"><div class="ttname"><a href="group__assertions.html#gaee6cf7956907d821659dae809a340341">IHCT_ASSERT</a></div><div class="ttdeci">#define IHCT_ASSERT(expr)</div><div class="ttdoc">Asserts a statement inside a test unit. If the expression is false, the unit will fail the test.</div><div class="ttdef"><b>Definition:</b> ihct.h:78</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
